@@ -1,0 +1,212 @@
+*{
+  /* border:2px green dashed; */
+  margin:0px;
+  padding:0px; 
+}
+
+body{
+   margin-left: 20px;
+   margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    min-width:100%;
+}
+
+/* what contains everything on the page */
+.container{
+  /* margin-right:3em; */
+  min-width:100%;
+  /* width:100%; */
+  height:100vh;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+        "icon"
+        "nav"
+        "content"
+        "footer";
+}
+
+/* step one: name your sections */
+/* the sections of my about me page */
+.icon,
+ nav,
+ .content,
+ footer{
+   padding-left: 3em;
+   padding-right: 3em;
+   text-align: center;
+}
+
+.icon svg {
+  width:25%;
+  padding-bottom: 15px;
+  
+}
+
+
+/* navigation bar styling */
+
+nav{
+  
+  grid-area:nav;
+  justify-content: center;
+  text-align:center;
+  padding-left:4em;
+  padding-right: 4em;
+}
+
+
+nav ul{
+  margin: 10px
+  padding:0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 17px;
+
+  position: relative;
+}
+
+nav a{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 10px;
+}
+
+nav a:hover{
+  color:rgb(255, 0, 149);
+  
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color:rgb(255, 0, 149);
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms
+}
+
+nav a:hover::before {
+  width:100%;
+
+}
+
+
+/* a:link {
+    text-decoration: none;
+  } */
+  
+a:visited {
+    text-decoration: none;
+  }
+
+/* content section */
+.content{
+  grid-area:content;
+  max-width:600px;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+.content img{
+  width: 60%;
+  border-radius: 8%;
+  margin-bottom: 4em;
+}
+
+.content p{
+  text-align: left;
+  font-size:1em;
+  line-height: 1.5rem;
+}
+.paragraph2{
+  text-indent: 2em;
+  margin: 0;
+    font-family: roboto;
+}
+/* the span tag that wrap starts off my paragraph */
+.bigText {
+  font-size:2em;
+  padding-right:.5em;
+}
+footer{
+  grid-area:footer;
+}
+footer p{
+  font-size:2em;
+}
+
+footer li {
+  display:inline;
+}
+
+footer ul {
+  max-width: 640px;
+  margin: 2em auto;
+  padding:0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+footer ul li{
+  list-style: none;
+  align-self:flex-end;
+}
+footer ul li a {
+  text-decoration:none;
+  color: black;
+  opacity:.6;
+  transition: .3s;
+}
+footer ul li a:hover {
+  text-decoration:none;
+  color:rgb(255, 0, 149);
+}
+
+footer svg {
+  width:20%;
+}
+
+footer p{
+  font-size: 1em;
+}
+/* grid system for desktop */
+@media (min-width:1040px){
+  .container{
+    width:100%;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+          "icon content"
+          "nav content"
+          "nav content"
+          "footer footer";
+  }
+    nav ul{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .icon svg {
+      width: 70%;
+      padding-left:20px;
+    }
+
+  
+
+}
