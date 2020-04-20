@@ -4,6 +4,8 @@
   padding:0px; 
 }
 
+
+
 body{
    margin-left: 10px;
    margin-right: 10px;
@@ -95,9 +97,9 @@ nav{
   grid-area:nav;
   justify-content: center;
   text-align:center;
-  padding-left:3em;
-  padding-right: 3em;
-  max-width:700px;
+  padding-left:1.5em;
+  padding-right: 1.5em;
+  max-width:100%;
 }
 
 
@@ -254,7 +256,7 @@ footer p{
       flex-direction: column;
      
     }
-    
+
     .icon svg {
       width: 60%;
       padding-top:30px;
